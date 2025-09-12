@@ -1,0 +1,72 @@
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	background-image: url(../media/res-asset_page-bg.jpg);
+	xbackground-image: radial-gradient(circle at 40% 10%, #BF7667, transparent), radial-gradient(circle at 80% 50%, #EFDDB7, transparent), radial-gradient(circle at 20% 80%, #977351, transparent), radial-gradient(circle at 10% 10%, #E1C3B9, transparent);
+	background-attachment: fixed;
+	-webkit-background-attachment: fixed;
+	-moz-background-attachment: fixed;
+	-o-background-attachment: fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
+
+.content {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+body>header {
+	position: fixed;
+	z-index: 99;
+	width: 100%;
+	height: 80px;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+body>header .logo-type {
+	display: inline-block;
+	height: 80px;
+	line-height: 80px;
+	margin: 0 80px 0 0;
+	padding: 0;
+	font-family: "Great Vibes";
+	font-size: 48px;
+	color: #FFFFFF;
+	text-decoration: none;
+	cursor: pointer;
+	color: #FFFFFF;
+}
+
+.logo {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 10px 0 0;
+	cursor: pointer;
+}
+
+section {
+	padding: 80px 20px 0;
+}
+
+section p {
+	margin: 40px 0;
+	color: yellow;
+}
+
+.android-play {
+	text-align: center;
+}
+
+.android-play img {
+	width: 160px;
+	height: 160px;
+	margin-top: 20px;
+	cursor: pointer;
+}

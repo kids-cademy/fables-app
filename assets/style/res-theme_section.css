@@ -1,0 +1,20 @@
+.section {
+	position: relative;
+	display: inline-block;
+	height: 544px;
+	vertical-align: top;
+}
+
+.tiles {
+	display: inline-block;
+	height: 544px;
+	margin-right: 50px;
+}
+
+.tiles:last-child {
+	margin-right: 0px;
+}
+
+.tiles img:HOVER {
+	box-shadow: 2px 2px 40px 8px #E8E8E8;
+}

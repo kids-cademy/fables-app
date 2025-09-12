@@ -1,0 +1,71 @@
+.fables-list {
+	display: inline-block;
+	vertical-align: top;
+	overflow: hidden;
+	width: 340px;
+	margin-left: 40px;
+	height: 570px;
+	transition: margin-left 0.5s, width 0.5s, height 0.5s 0.5s;
+}
+
+.fables-list.closed {
+	width: 0;
+	height: 0 !important;
+	margin-left: 0;
+	transition: margin-left 0.5s 0.5s, width 0.5s 0.5s, height 0.5s;
+}
+
+.fables-list .item {
+	display: block;
+	height: 55px;
+	padding: 0 4px 0 0;
+	border: solid 1px transparent;
+	cursor: pointer;
+}
+
+.fables-list .item * {
+	cursor: inherit;
+}
+
+.fables-list .item.focus {
+	xborder: solid 1px white;
+}
+
+.fables-list .item:first-child {
+	padding-top: 0;
+}
+
+.fables-list .item:lasst-child {
+	padding-bottom: 0;
+}
+
+.fables-list img {
+	float: left;
+	width: 55px;
+	height: 55px;
+	margin-right: 10px;
+}
+
+.fables-list .title {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 2.0em;
+	line-height: 1.6em;
+	margin: 0;
+	padding: 0;
+	color: #f4f400;
+}
+
+.fables-list .item:hover .title {
+	color: #FFFFFF;
+}
+
+.fables-list .moral {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 1.4em;
+	margin: 0;
+	color: #74451f;
+}

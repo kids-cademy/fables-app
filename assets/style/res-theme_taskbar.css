@@ -1,0 +1,29 @@
+.taskbar {
+	position: absolute;
+	height: 80px;
+	width: 100%;
+	top: 780px;
+	xbottom: -80px;
+	background-color: rgba(255, 255, 255, 0.3);
+	xopacity: 0.4;
+}
+
+.taskbar img {
+	height: 64px;
+	margin: 8px;
+	cursor: pointer;
+	border-radius: 32px;
+	opacity: 1;
+}
+
+.taskbar img:hover {
+	box-shadow: 0 0 20px 8px #9c5d29;
+	background-color: #9c5d29;
+	opacity: 1;
+}
+
+.taskbar img.disabled {
+	box-shadow: none;
+	cursor: default;
+	opacity: 0.4;
+}

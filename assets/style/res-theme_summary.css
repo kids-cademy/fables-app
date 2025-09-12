@@ -1,0 +1,19 @@
+.summary {
+	float: left;
+	margin: 4px;
+}
+
+.summary li {
+	font-family: Calibri;
+	font-size: 22px;
+	padding: 1px 0 1px 60px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #FFFFFF;
+}
+
+.summary li:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+	color: #7A4920;
+}

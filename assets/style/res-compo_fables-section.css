@@ -1,0 +1,240 @@
+.fables-section {
+	display: inline-block;
+	vertical-align: top;
+	width: 518px;
+	white-space: normal;
+	margin-left: 80px;
+	cursor: move;
+	overflow: hidden;
+}
+
+.fable-view:not(.closed)+.fables-section:not(.collapsed) {
+	margin-left: 80px;	
+}
+
+.fables-section.collapsed {
+	height: 570px !important;
+}
+
+.fables-section:first-child {
+	margin-left: 0;
+}
+
+.fables-section .empty {
+	display: block;
+	position: absolute;
+	width: 128px;
+	height: 128px;
+	background-color: rgba(120, 70, 16, 0.4);
+}
+
+.fables-section .header {
+	box-sizing: border-box;
+	height: 48px;
+	font-size: 2.2em;
+	line-height: 1;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 2px;
+	background-color: rgba(120, 70, 16, 0.4);
+	white-space: nowrap;
+	overflow: hidden;
+	border: solid 1px transparent;
+}
+
+.fables-section .header.focus {
+	xborder: solid 1px white;
+}
+
+.fables-section.collapsed .header {
+	white-space: normal;
+}
+
+.fables-section .header .caption {
+	height: 48px;
+	line-height: 48px;
+	font-size: 22px;
+	padding-left: 10px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.fables-section .header .caption.hidden {
+	display: none;
+}
+
+.fables-section .header .controls.hidden * {
+	display: none;
+}
+
+.fables-section .header .icon {
+	width: 48px;
+	height: 48px;
+	border-radius: 0;
+	margin: 0 2px 0 0;
+	background-color: rgba(120, 70, 16, 0.4);
+	background-size: 24px 24px;
+}
+
+.fables-section.collapsed .header .icon {
+	margin: 0 0 2px 0;
+}
+
+.fables-section .header .icon:first-child {
+	margin-left: 0;
+}
+
+.fables-section .header * {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0;
+	white-space: normal;
+	font-size: inherit;
+	line-height: inherit;
+	margin: 0;
+}
+
+.fables-section .name {
+	text-transform: uppercase;
+	color: yellow;
+}
+
+.fables-section .indices {
+	margin: 0 0 0 290px;
+}
+
+.fables-section.collapsed .indices {
+	margin: 360px 0 0 0;
+	padding-right: 0;
+}
+
+.fables-section .indices * {
+	height: 48px;
+	line-height: 48px;
+	padding: 0 4px;
+	color: yellow;
+	text-align: center;
+	font-size: 22px;
+}
+
+.fables-section.collapsed .indices * {
+	width: 46px;
+	height: auto;
+	line-height: normal;
+	padding: 0;
+	margin-top: 4px;
+	font-size: 18px;
+}
+
+.fables-section.collapsed .separator {
+	display: none;
+}
+
+.fables-section .fables {
+	position: relative;
+	width: inherit;
+}
+
+.fables-section .fable {
+	position: absolute;
+	box-sizing: border-box;
+	left: 0;
+	top: 0;
+	cursor: pointer;
+}
+
+.fables-section .fable.focus {
+	border: solid 1px white;
+}
+
+.fables-section .fable.s1x1 {
+	width: 128px;
+	height: 128px;
+}
+
+.fables-section .fable.empty {
+	width: 128px;
+	height: 128px;
+	margin: 0;
+	cursor: default;
+}
+
+.fables-section .fable.s2x1 {
+	width: 258px;
+	height: 128px;
+}
+
+.fables-section .fable.s1x2 {
+	width: 128px;
+	height: 258px;
+}
+
+/* --------------------------------------------------------
+ * Fable view open/close animation
+ *
+ * selector		| properties					  | duration | delay
+ * 
+ * .picture		: opacity							2.5			0.0
+ */
+.fables-section.opened {
+	width: 518px;
+	transition: width 0.5s 1s, margin-left 0.5s;
+}
+
+.fables-section.collapsed {
+	width: 48px !important;
+	transition: width 0.5s 1s, margin-left 0.5s 1s;
+}
+
+.fables-section.collapsed .fables {
+	width: 0 !important;
+}
+
+/* Stick together two consecutive collapsed sections, even between them there are closed fables list or fable view.
+ * Next three declarations blocks, aka rules sets, serve above purpose but written separately for clarity.  
+ * Uses multiple next sibling selector that is unclear how well is supported at the date this being written, December 2015.
+ */
+.fables-section.collapsed+.fables-section.collapsed {
+	margin-left: 1px;
+}
+
+.fables-section.collapsed+.fable-view.closed+.fables-section.collapsed {
+	margin-left: 1px;
+}
+
+.fables-section.collapsed+.fables-list.closed+.fable-view.closed+.fables-section.collapsed {
+	margin-left: 1px;
+}
+
+.fables-section.opened .header {
+	height: 48px;
+	transition: height 0.5s 0.5s;
+}
+
+.fables-section.collapsed .header {
+	height: 568px;
+	white-space: nornal;
+	transition: height 0.5s 1.5s;
+}
+
+.fables-section.opened .header .collapse {
+	transition: transform 0.5s 2s;
+}
+
+.fables-section.collapsed .header .collapse {
+	transform: rotate(180deg);
+	transition: transform 0.5s;
+}
+
+.fables-section.opened .fable {
+	opacity: 1;
+	transition: left 0.5s 1.5s, top 0.5s 2s, opacity 0.5s 1s;
+}
+
+.fables-section.collapsed .fable {
+	left: 0 !important;
+	top: 0 !important;
+	opacity: 0;
+	transition: top 0.5s, left 0.5s 0.5s, opacity 0.5s 0.5s;
+}

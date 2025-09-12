@@ -1,0 +1,85 @@
+body>footer {
+	width: 100%;
+	padding-top: 4px;
+}
+
+body>footer .logo {
+	display: inline-block;
+	vertical-align: top;
+	max-width: 60px;
+	max-height: 50px; 
+}
+
+body>footer span {
+	display: inline-block;
+	vertical-align: top;
+	height: 48px;
+	line-height: 48px;
+	margin: 0;
+	color: white; 
+}
+
+body>footer .logo-type {
+	font-family: "Great Vibes";
+	font-size: 32px;
+	cursor: pointer;
+}
+
+body>footer .public-domain {
+	float: right;
+	font-size: 16px;
+}
+
+body>footer .references {
+	margin-bottom: 20px;
+}
+
+.references {
+	background-color: rgba(255,255,255,0.2);
+	padding: 20px 0;
+}
+
+.references dl {
+	display: inline-block;
+	float: left;
+	margin: 0 30px 20px 0;
+	width: 170px;
+}
+
+.references dl:first-child {
+	margin-left: 0;
+}
+
+.references dl dt {
+	margin-bottom: 10px;
+	font-size: 18px;
+	text-transform: uppercase;
+	cursor: default;
+	xborder-bottom: solid 1px #E6E6E6;
+}
+
+.references dl dd {
+	margin-bottom: 0px;
+	transition: .6s ease-in-out;
+}
+
+.references dl dd * {
+	font-size: 18px;
+	line-height: 30px;
+}
+
+.references dl.right {
+	xfloat: right;
+}
+
+.references dl.right a {
+	color: yellow;
+}
+
+.references dl.right a:hover {
+	color: white;
+}
+
+body>footer .sharing {
+	float: right;
+}

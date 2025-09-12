@@ -1,0 +1,252 @@
+.fable-view {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	height: inherit;
+	margin-left: 80px;
+}
+
+.fable-view .picture {
+	width: 0;
+	height: 0;
+	z-index: 0;
+}
+
+.fable-view .picture img {
+	display: block;
+	height: 256px;
+	width: 256px;
+	z-index: -10;
+	border: solid 1px transparent;
+}
+
+.fable-view .picture img.focus {
+	border: solid 1px white;
+}
+
+.fable-view>.variant-indices {
+	position: absolute;
+	left: 70px;
+	top: 266px;
+	overflow: hidden;
+}
+
+.fable-view>.variant-indices .variant-index {
+	width: 48px;
+	height: 48px;
+	margin: 1px;
+	font-size: 28px;
+	line-height: 48px;
+	text-align: center;
+	background-color: rgba(120, 70, 16, 0.3);
+	color: yellow;
+	text-shadow: 1px 1px #000000;
+	border: solid 1px transparent;
+	cursor: pointer;
+}
+
+.fable-view>.variant-indices .variant-index.active {
+	border-left: solid 1px white;
+}
+
+.fable-view>.content {
+	height: inherit;
+}
+
+.fable-view .header {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	box-sizing: border-box;
+	width: 300px;
+	height: inherit;
+	margin: 0 50px 0 128px;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 60px 0 60px 0;
+}
+
+.fable-view .header .content {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.fable-view .header .title {
+	display: block;
+	margin: 50px 10px 0 50%;
+	padding: 0;
+	font-size: 22px;
+	color: yellow;
+	text-shadow: 1px 1px #000000;
+	white-space: normal;
+}
+
+.fable-view .header .moral {
+	display: block;
+	position: absolute;
+	width: 75%;
+	top: 280px;
+	padding: 0 0 0 20px;
+	font-size: 22px;
+	color: white;
+	text-shadow: 1px 1px #000000;
+	white-space: normal;
+	overflow: hidden;
+}
+
+.fable-view .icon.close {
+	position: absolute;
+	top: 450px;
+	right: -40px;
+	background-color: rgba(255, 0, 0, 0.6);
+}
+
+.fable-view .icon.share {
+	position: absolute;
+	top: 360px;
+	right: -40px;
+	background-color: rgba(53, 96, 158, 0.6);
+}
+
+.fable-view .icon.play, .fable-view .icon.pause {
+	position: absolute;
+	top: 270px;
+	right: -40px;
+	background-color: rgba(40, 100, 40, 0.6);
+}
+
+.fable-view .column-text {
+	display: inline-block;
+	vertical-align: top;
+	height: 600px;
+}
+
+.fable-view .column-text .column {
+	width: 400px;
+	margin: 0 20px;
+}
+
+.fable-view .column-text p {
+	line-height: 36px;
+	margin-bottom: 36px;
+	font-size: 22px;
+	color: white;
+}
+
+.fable-view .column-text p:not(.overflow )::first-letter {
+	font-size: 140%;
+	font-family: "Great Vibes";
+	margin-right: 4px;
+}
+
+.fable-view .column-text q {
+	color: yellow;
+}
+
+/* --------------------------------------------------------
+ * Fable view open/close animation
+ *
+ * selector		| properties					  | duration | delay
+ * 
+ * .picture		: opacity							2.5			0.0
+ * .text		: opacity							2.5			0.0
+ * .icon.close	: width, height, right, opacity 	0.25		0.0
+ * .icon.play	: width, height, right, opacity 	0.25		0.25
+ * .header		: margin-left						1.0			0.0
+ * .column-text	: width								1.0			0.5
+ * .header		: height							0.5			1.5
+ * .picture     : width, height						0.5			1.5
+ * .header		: width, margin						0.5			2.0
+ * .picture		: width								0.5			2.0 
+ * .fable-view	: margin-left						0.5			2.0
+ */
+.fable-view {
+	transition: margin-left 0.5s 2s;
+}
+
+.fable-view.closed {
+	margin-left: 0;
+}
+
+.fable-view .column-text {
+	transition: width 1.0s 0.5s;
+}
+
+.fable-view.closed .column-text {
+	width: 0 !important;
+	
+	/* fable view content contains two inline blocks: header with title and moral and column text
+	 * if there is white space (new line is an white space) between them it is added to content dimension
+	 * this increases content width for closed fable view to 3px instead of 0 - of course this value depends on fonts
+	 * next negative left margin hack removes the white space but need to be adjusted
+	 * reference: https://css-tricks.com/fighting-the-space-between-inline-block-elements/ 
+	 */
+	 
+	/* alternative solution:
+	 * One of the ways to fight against the space between inline block elements is setting letter-spacing: -4px; 
+	 * on the parent container of inline-block elements. You will then need to reset letter-spacing: normal; on 
+	 * the child elements.
+	 * reference: https://css-tricks.com/almanac/properties/l/letter-spacing/
+	 */
+	  
+	margin-left: -4px;
+}
+
+.fable-view .icon.close {
+	transition: all 0.25s;
+}
+
+.fable-view .icon.share {
+	transition: all 0.25s 0.25s;
+}
+
+.fable-view .icon.play, .fable-view .icon.pause {
+	transition: all 0.25s 0.5s;
+}
+
+.fable-view.closed .icon {
+	width: 0;
+	height: 0;
+	right: 0;
+	opacity: 0;
+}
+
+.fable-view .variant-indices {
+	width: 50px;
+	transition: width 0.5s 1s;
+}
+
+.fable-view.closed .variant-indices {
+	width: 0;
+}
+
+.fable-view .header {
+	transition: margin 0.5s, border-radius 0.5s 2.5s, height 0.5s 1.5s, width 0.5s 1.0s;
+}
+
+.fable-view.closed .header {
+	width: 0;
+	height: 0;
+	margin: 0;
+	border-radius: 0;
+	transition: margin 0.5s, border-radius 0.5s, height 0.5s 1.5s, width 0.5s 2s;
+}
+
+.fable-view .text {
+	transition: opacity 2.5s;
+}
+
+.fable-view.closed .text {
+	opacity: 0;
+}
+
+.fable-view .picture img {
+	transition: opacity 2.5s, height 0.5s 1.5s, width 0.5s 2s;
+}
+
+.fable-view.closed .picture img {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}

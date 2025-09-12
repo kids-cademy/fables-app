@@ -1,0 +1,101 @@
+a[href='about.htm'] {
+	border-color: #FFFFFF;
+}
+
+.about .about-message {
+	background-color: rgba(255, 255, 255, 0.2);
+	padding: 30px 0;
+}
+
+.about .about-message h1 {
+	margin: 0;
+	padding: 0;
+}
+
+.about .about-message p {
+	color: white;
+}
+
+.about .developer {
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	margin-top: 60px;
+	padding: 0 0 10px;
+	white-space: nowrap;
+}
+
+.about .developer:after {
+	display: block;
+	content: "";
+	clear: both;
+}
+
+.about .developer>img {
+	float: left;
+	width: 180px;
+	height: 180px;
+	margin-right: 30px;
+	border-radius: 50%;
+	border: solid 4px white;
+}
+
+.about .developer h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 24px;
+}
+
+.about .developer h2 {
+	margin: 0 0 20px;
+	font-size: 18px;
+	text-transform: lowercase;
+	color: white;
+}
+
+.about .developer h3, .about .developer a {
+	display: block;
+	margin: 0;
+	padding: 0; 
+	font-size: 16px;
+	line-height: 32px;
+	color: white;
+}
+
+.about .developer a * {
+	cursor: pointer;
+}
+
+.about .developer h3 img, .about .developer a img {
+	width: 24px;
+	height: 24px;
+	margin-right: 20px;
+	vertical-align: middle;
+}
+
+.about form {
+	margin-bottom: 30px;	
+}
+
+.about .message-form {
+	padding: 30px 0;
+	margin-top: 80px;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.about .actions {
+	xfloat: right;
+	margin-top: 4px;
+	margin-left: 220px;
+}
+
+.about .actions img {
+	width: 32px;
+	margin-right: 10px;
+	opacity: 0.3;
+	cursor: pointer;
+}
+
+.about .actions img:hover {
+	opacity: 0.6;
+}

@@ -1,0 +1,122 @@
+.dialog {
+	position: fixed;
+	top: 200px;
+	left: 200px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #DEE7EF #DEE7EF #000 #000;
+	background: linear-gradient(to right, #888 0%, #888 20%, #999 20%, #999 100%);
+	box-shadow: 8px 8px 30px 4px #E8E8E8;
+}
+
+.dialog.moving {
+	opacity: 0.6;
+}
+
+.dialog .close {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	right: 20px;
+	top: -20px;
+	background-size: 16px 16px;
+	background-color: red;
+	opacity: 0.8; 
+}
+
+.dialog h1 {
+	cursor: move;
+	font-family: Calibri;
+	font-size: 28px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-align: left;
+	margin: 10px 0;
+	opacity: 1.0;
+	text-overflow: ellipsis;
+	padding: 24px 0px 24px 24%;
+}
+
+.dialog .content {
+	background-color: #004D63;
+	padding: 8% 16%;
+	opacity: 1.0;
+}
+
+.dialog .content p {
+	font-family: Calibri;
+	font-size: 18px;
+	line-height: 24px;
+	max-height: 96px;
+	color: #DEE7EF;
+	margin-bottom: 5%;
+	overflow: hidden;
+	opacity: 1.0;
+}
+
+.dialog .content .buttons buttonx {
+	font-family: Calibri;
+	font-size: 20px;
+	font-weight: normal;
+	padding: 0;
+	width: 100px;
+	background-color: #006987;
+	border: solid 1px #DEE7EF;
+	color: #DEE7EF;
+	cursor: pointer;
+	opacity: 1.0;
+}
+
+.dialog .prevent {
+	padding: 16px 0 16px 24%;
+	white-space: nowrap;
+	xmin-height: 20px;
+}
+
+.dialog .prevent * {
+	font-size: 14px;
+}
+
+.dialog .prevent input {
+	display: inline-block;
+	position: relative;
+	z-index: -1;
+	width: 16px;
+	height: 16px;
+	margin: 0;
+}
+
+.dialog .prevent input:after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	background-color: white;
+	border: solid 1px #E6E6E6;
+}
+
+.dialog .prevent label {
+	display: inline-block;
+	width: auto;
+	float: none;
+	white-space: nowrap;
+	overflow: hidden;
+	height: 16px;
+	line-height: 16px;
+	vertical-align: top;
+	padding: 0 0 0 10px;
+	margin: 0;
+}
+
+.dialog .prevent.hidden {
+	display: inherit;
+}
+
+.dialog .prevent.hidden input {
+	display: none;
+}
+
+.dialog .prevent.hidden label {
+	display: none;
+}

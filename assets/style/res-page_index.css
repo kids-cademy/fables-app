@@ -1,0 +1,175 @@
+.index .message {
+	background-color: rgba(255, 255, 255, 0.2);
+	padding: 30px 0;
+}
+
+.index .message h1 {
+	margin: 0;
+	padding: 0;
+}
+
+.index .message p {
+	color: white;
+	margin: 0;
+	padding: 0;
+}
+
+.index .panorma-play {
+	cursor: pointer;
+	animation: panorma-play 16s linear 2s infinite alternate;
+}
+
+.index .play-store {
+	margin-top: 80px;
+	padding: 30px 0 60px;	
+}
+
+.index .play-store h2 {
+	margin: 0;
+	color: white;
+}
+
+.index .android-app {
+	xborder: dotted 1px #E8E8E8;
+	max-height: 200px;
+	margin-top: -40px;
+	margin-bottom: 100px;
+}
+
+.index .phone {
+	display: inline-block;
+	width: 247px;
+	height: 500px;
+	box-sizing: border-box;
+	padding: 44px 14px 58px 14px;
+	background-image: url(../media/res-page-index-screenshots_phone-wire-frame.png);
+	margin-right: 100px;
+	position: relative;
+	z-index: -100;
+}
+
+.index .phone .screen {
+	width: 100%;
+	height: 100%;
+	border: solid 1px;
+	border-color: #616161 #9E9E9E #9E9E9E #616161;
+	overflow: hidden;
+}
+
+.index .phone .screen img {
+	animation: phone 20s linear infinite alternate;
+}
+
+.index .android-app h2 {
+	xdisplay: inline-block;
+	xvertical-align: top;
+}
+
+.index .android-app .action {
+	width: 160px;
+	height: 160px;
+	vertical-align: top;
+	margin-top: 90px;
+	margin-left: 120px;
+}
+ 
+.index .android-app a img {
+	cursor: pointer;
+}
+ 
+.index .message {
+}
+
+.index .no-ads {
+	xdisplay: inline-block;
+	xwidth: 400px;
+}
+
+.index .message.no-ads {
+	background-color: rgba(0,0,0, 0.2);
+	padding: 20px 0;
+	margin: 0 0 80px 0;	
+}
+
+.index .no-ads h4 {
+	margin: 0 0 0 300px;
+	color: #FFFFFF;
+	xfont-size: 14px;
+	xfont-weight: bold;
+	xtext-transform: uppercase;
+}
+
+@keyframes panorma-play {
+	0% {
+		transform: translateX(0);
+	}
+	10% {
+		transform: translateX(0);
+	}
+	45% {
+		transform: translateX(-1000px);
+	}
+	55% {
+		transform: translateX(-1000px);
+	}
+	90% {
+		transform: translateX(-2000px);
+	}
+	100% {
+		transform: translateX(-2000px);
+	}
+}
+
+@keyframes phone {
+	0% {
+		transform: translateX(0);
+	}
+	9% {
+		transform: translateX(0);
+	}
+	10% {
+		transform: translateX(-226.75px);
+	}
+	19% {
+		transform: translateX(-226.75px);
+	}
+	20% {
+		transform: translateX(-453.5px);
+	}
+	29% {
+		transform: translateX(-453.5px);
+	}
+	30% {
+		transform: translateX(-680.25px);
+	}
+	39% {
+		transform: translateX(-680.25px);
+	}
+	40% {
+		transform: translateX(-907px);
+	}
+	49% {
+		transform: translateX(-907px);
+	}
+	50% {
+		transform: translateX(-1133.75px);
+	}
+	59% {
+		transform: translateX(-1133.75px);
+	}
+	60% {
+		transform: translateX(-1360.5px);
+	}
+	69% {
+		transform: translateX(-1360.5px);
+	}
+	70% {
+		transform: translateX(-1587.25px);
+	}
+	79% {
+		transform: translateX(-1587.25px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}

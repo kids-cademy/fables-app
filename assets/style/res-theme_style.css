@@ -1,0 +1,13 @@
+.main-section h1 {
+	font-size: 18px;
+	font-weight: normal;
+	margin: 20px 0;
+}
+
+.page-menu {
+	border-color: transparent !important;
+}
+
+.hidden {
+	display: none;
+}

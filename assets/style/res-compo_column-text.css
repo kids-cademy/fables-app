@@ -1,0 +1,48 @@
+.column-text {
+	position: relative;
+	box-sizing: border-box;
+	width: 0;
+	height: inherit;
+	overflow: hidden;
+}
+
+.column-text .column {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 400px;
+	height: auto;
+	white-space: normal;
+}
+
+.column-text .column.hidden {
+	display: none;
+}
+
+.column-text .column:first-child {
+	margin-left: 0;
+}
+
+.column-text p {
+	padding: 0;
+	margin: 0;
+}
+
+.column-text p:last-child {
+	margin-bottom: 0;
+}
+
+.column-text q {
+	color: seagreen;
+}
+@media screen and ( orientation: portrait ) {
+
+.column-text .column {
+	width: 100%;
+}
+
+.column-text .column p {
+	white-space: normal;
+}
+}

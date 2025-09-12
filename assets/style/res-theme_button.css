@@ -1,0 +1,35 @@
+button {
+	position: relative;
+	box-sizing: border-box;
+	font-size: 1.6em;
+	padding: 0.2em 1.8em;
+	color: #FFFFFF;
+	background-color: #62A30C;
+	cursor: pointer;
+	overflow: hidden;
+	transition: background-color .3s;
+}
+
+button:active {
+	background-color: #7CBC27;
+	box-shadow: none;
+}
+
+button:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	background-color: rgba(236, 240, 241, .3);
+	border-radius: 9999px;
+	transform: translate(-50%, -50%);
+}
+
+button:active:before {
+	width: 140%;
+	height: 200%;
+	transition: width .2s ease-out, height .2s ease-out;
+}

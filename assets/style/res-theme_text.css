@@ -1,0 +1,53 @@
+html {
+	font-family: "Open Sans";
+	font-weight: lighter;
+	font-size: 10px;
+	letter-spacing: 0.04em;
+}
+
+h1 {
+	font-size: 3.6em;
+	color: yellow;
+	margin: 1.0em 0 1.8em;
+}
+
+h2 {
+	font-size: 3.0em;
+	color: yellow;
+	margin: 1.0em 0 1.5em;
+}
+
+h3 {
+	font-size: 2.4em;
+	color: yellow;
+	margin: 1.0em 0 1.2em;
+}
+
+h4 {
+	font-size: 1.8em;
+	color: yellow;
+	margin: 1.0em 0 0.9em;
+}
+
+h5 {
+	font-size: 1.4em;
+	color: yellow;
+	margin: 1.0em 0 0.7em;
+}
+
+h6 {
+	font-size: 1.2em;
+	color: yellow;
+	margin: 1.0em 0 0.6em;
+}
+
+p  {
+	font-size: 1.8em;
+	color: white;
+	margin: 0 0 1.0em 0;
+}
+
+span, a {
+	font-size: inherit;
+	color: inherit;
+}

@@ -1,0 +1,82 @@
+::-webkit-input-placeholder {
+  color: black;
+}
+
+::-moz-placeholder {
+  color: black;
+}
+
+:-ms-input-placeholder {
+  color: black;
+}
+
+::-ms-input-placeholder {
+  color: black;
+}
+
+:placeholder-shown { /* Standard one last! */
+  color: black;
+}
+
+form {
+	margin-bottom: 40px;
+}
+
+form textarea {
+	width: 700px;
+	xheight: 40px;
+	overflow: hidden; 
+	padding-bottom: 10px;
+	font-size: 18px;
+	line-height: 22px;
+	background: 0;
+	border-bottom: solid 1px #E6E6E6;
+	xborder-left: solid 1px #E6E6E6;
+	resize: none;
+	margin-top: 20px;
+}
+
+form input {
+	display: block;
+	border: 0;
+	background: 0;
+	border-bottom: solid 1px #E6E6E6;
+	width: 700px;
+	padding: 10px 0;
+	line-height: 22px;
+	font-size: 18px;
+	margin-top: 20px;
+}
+
+form input[disabled] {
+	color: green;
+}
+
+form .checkbox {
+	margin: 10px 0 0;
+}
+
+form .checkbox:first-child {
+	margin: 0;
+}
+
+form .checkbox .control {
+	width: 30px;
+	border: solid 1px #888;
+	background-color: white;
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+form .checkbox .control.checked {
+	background-image: url(../media/res-asset_check-icon.png);
+}
+
+form .checkbox span {
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	font-size: 18px;
+	color: white;
+}

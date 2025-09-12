@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<HTML lang="en">
+<HEAD>
+<META content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<TITLE>Kids Fables / Play</TITLE>
+<META content="Iulian Rotaru" name="Author" />
+<META content="Kids Fables / Play" name="Description" />
+<META content="IE=9; IE=8; IE=7; IE=EDGE" http-equiv="X-UA-Compatible" />
+<META content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport" />
+<META content="Kids Fables" property="og:title" />
+<META content="Fables for kids, small and big alike." property="og:description" />
+<META content="media/res-asset_app-featured.png" property="og:image" />
+<META content="http://fables.kids-cademy.com/" property="og:url" />
+<META content="media/res-asset_app-featured.png" name="twitter:card" />
+<META content="white" name="theme-color" />
+<META content="yes" name="apple-mobile-web-app-capable" />
+<META content="black" name="apple-mobile-web-app-status-bar-style" />
+<META content="Kids Fables" name="apple-mobile-web-app-title" />
+<META content="media/res-asset_app-icon-144.png" name="msapplication-TileImage" />
+<META content="#FFFFFF" name="msapplication-TileColor" />
+<LINK href="media/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<LINK href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+<LINK href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type="text/css" />
+<LINK href="media/res-asset_app-icon-152.png" rel="apple-touch-icon" type="text/css" />
+<LINK href="style/res-theme_reset.css" rel="stylesheet" type="text/css" />
+<LINK href="style/res-theme_fx.css" rel="stylesheet" type="text/css" />
+<LINK href="style/res-theme_button.css" rel="stylesheet" type="text/css" />
+<LINK href="style/res-theme_form.css" rel="stylesheet" type="text/css" />
+<LINK href="style/res-theme_icon.css" rel="stylesheet" type="text/css" />
+<LINK href="style/res-theme_section.css" rel="stylesheet" type="text/css" />
+<LINK href="style/res-theme_size.css" rel="stylesheet" type="text/css" />
+<LINK href="style/res-theme_style.css" rel="stylesheet" type="text/css" />
+<LINK href="style/res-theme_summary.css" rel="stylesheet" type="text/css" />
+<LINK href="style/res-theme_taskbar.css" rel="stylesheet" type="text/css" />
+<LINK href="style/res-theme_text.css" rel="stylesheet" type="text/css" />
+<LINK href="style/res-compo_column-text.css" rel="stylesheet" type="text/css" />
+<LINK href="style/res-compo_fable-view.css" rel="stylesheet" type="text/css" />
+<LINK href="style/res-compo_fables-list.css" rel="stylesheet" type="text/css" />
+<LINK href="style/lib_sys-dialog.css" rel="stylesheet" type="text/css" />
+<LINK href="style/res-compo_sharing.css" rel="stylesheet" type="text/css" />
+<LINK href="style/res-template_dialog.css" rel="stylesheet" type="text/css" />
+<LINK href="style/res-compo_sharing-dialog.css" rel="stylesheet" type="text/css" />
+<LINK href="style/res-compo_fables-section.css" rel="stylesheet" type="text/css" />
+<LINK href="style/res-template_page.css" rel="stylesheet" type="text/css" />
+<LINK href="style/lib_js-panorama.css" rel="stylesheet" type="text/css" />
+<LINK href="style/res-page_play.css" rel="stylesheet" type="text/css" />
+<SCRIPT defer="true" src="script/lib.js-lib.js" type="text/javascript"></SCRIPT>
+<SCRIPT defer="true" src="script/lib.js-panorama.js" type="text/javascript"></SCRIPT>
+<SCRIPT defer="true" src="script/script.com.kidscademy.fables.DataSource.js" type="text/javascript"></SCRIPT>
+<SCRIPT defer="true" src="script/script.com.kidscademy.fables.SectionHeader.js" type="text/javascript"></SCRIPT>
+<SCRIPT defer="true" src="script/script.com.kidscademy.fables.SectionGrid.js" type="text/javascript"></SCRIPT>
+<SCRIPT defer="true" src="script/script.com.kidscademy.fables.FableCloseListener.js" type="text/javascript"></SCRIPT>
+<SCRIPT defer="true" src="script/script.com.kidscademy.fables.SectionView.js" type="text/javascript"></SCRIPT>
+<SCRIPT defer="true" src="script/lib.box.js" type="text/javascript"></SCRIPT>
+<SCRIPT defer="true" src="script/script.com.kidscademy.fables.Dialog.js" type="text/javascript"></SCRIPT>
+<SCRIPT defer="true" src="script/script.com.kidscademy.fables.SharingDialog.js" type="text/javascript"></SCRIPT>
+<SCRIPT defer="true" src="script/script.com.kidscademy.fables.Sharing.js" type="text/javascript"></SCRIPT>
+<SCRIPT defer="true" src="script/lib.sys-dialog.js" type="text/javascript"></SCRIPT>
+<SCRIPT defer="true" src="script/script.com.kidscademy.fables.FablesListView.js" type="text/javascript"></SCRIPT>
+<SCRIPT defer="true" src="script/script.com.kidscademy.fables.FableView.js" type="text/javascript"></SCRIPT>
+<SCRIPT defer="true" src="script/script.com.kidscademy.fables.ColumnText.js" type="text/javascript"></SCRIPT>
+<SCRIPT defer="true" src="script/script.com.kidscademy.fables.AudioPlayer.js" type="text/javascript"></SCRIPT>
+<SCRIPT defer="true" src="script/script.com.kidscademy.fables.SectionViewGroup.js" type="text/javascript"></SCRIPT>
+<SCRIPT defer="true" src="script/script.js.event.keyEvents.js" type="text/javascript"></SCRIPT>
+<SCRIPT defer="true" src="script/script.js.event.Manager.js" type="text/javascript"></SCRIPT>
+<SCRIPT defer="true" src="script/script.com.kidscademy.fables.Page.js" type="text/javascript"></SCRIPT>
+<SCRIPT defer="true" src="script/script.com.kidscademy.fables.PlayPage.js" type="text/javascript"></SCRIPT>
+</HEAD>
+<BODY class="no-select">
+    <HEADER>
+        <DIV class="container">
+            <A href="index.htm">
+                <IMG class="logo" src="media/res-template-page_kids-cademy-logo.png" />
+                <SPAN class="logo-type">kids (a)cademy</SPAN>
+            </A>
+            <NAV>
+                <A href="play.htm">play</A>
+                <A href="catalog.htm">catalog</A>
+                <A href="about.htm">about</A>
+                <A class="install hidden">install</A>
+            </NAV>
+        </DIV>
+    </HEADER>
+    <SECTION class="body">
+        <DIV data-script="com.kidscademy.fables.PlayPage">
+		<DIV data-class="com.kidscademy.fables.SectionViewGroup">
+<DIV class="roller sections" data-list=".">
+				<DIV class="fables-section" data-class="com.kidscademy.fables.SectionView"><DIV class="header" data-class="com.kidscademy.fables.SectionHeader">
+		<H1 class="caption hidden"></H1>
+		<DIV class="controls">
+			<SPAN class="icon collapse" title="collpase / reveal this section"></SPAN><SPAN class="icon menu" title="open / close fables list"></SPAN>
+			<DIV class="indices" title="section indices">
+				<SPAN class="start"></SPAN><SPAN class="separator">/</SPAN><SPAN class="end"></SPAN>
+			</DIV>
+		</DIV>
+	</DIV><DIV class="fables" data-class="com.kidscademy.fables.SectionGrid" data-list="fableDescriptors"></DIV></DIV>
+			</DIV><BR clear="all" /></DIV>
+		<AUDIO data-class="com.kidscademy.fables.AudioPlayer"></AUDIO>
+		<DIV class="dialog hidden sharing-dialog" data-class="com.kidscademy.fables.SharingDialog"><H1 class="caption"><SPAN class="icon close"></SPAN></H1><DIV class="content">
+		<DIV class="sharing-dialog" data-class="com.kidscademy.fables.SharingDialog">
+	<DIV class="sharing" data-class="com.kidscademy.fables.Sharing"><SPAN class="icon facebook" title="Post Kids Fables on your Facebook wall."></SPAN><SPAN class="icon twitter" title="Send a tweet about Kids Fables."></SPAN><SPAN class="icon email" title="Send email to friend about Kids Fables."></SPAN></DIV>
+</DIV>
+	</DIV><DIV class="prevent"></DIV></DIV>
+	</DIV>
+        <BR clear="all" />
+    </SECTION>
+    
+    <DIV class="components">
+        <DIV id="js-sys-dialogs-id"><DIV class="js-sys-dialog hidden" data-class="js.widget.AlertDialog" id="js-sys-alert-id">
+    <H1 class="caption"></H1>
+    <P></P>
+    <BUTTON type="button">ok</BUTTON>
+    <DIV class="prevent hidden">
+      <INPUT id="js-sys-alert-prevent" type="checkbox" /><LABEL for="js-sys-alert-prevent">prevent</LABEL>
+    </DIV>
+  </DIV><DIV class="js-sys-dialog hidden" data-class="js.widget.ToastDialog" id="js-sys-toast-id">
+    <H1 class="caption"></H1>
+    <P></P>
+    <DIV class="prevent hidden">
+      <INPUT id="js-sys-toast-prevent" type="checkbox" /><LABEL for="js-sys-toast-prevent">prevent</LABEL>
+    </DIV>
+  </DIV><DIV class="js-sys-dialog hidden" data-class="js.widget.ConfirmDialog" id="js-sys-confirm-id">
+    <H1 class="caption"></H1>
+    <P></P>
+    <BUTTON class="ok" type="button">ok</BUTTON>
+    <BUTTON class="cancel" type="button">cancel</BUTTON>
+    <DIV class="prevent hidden">
+      <INPUT id="js-sys-confirm-prevent" type="checkbox" /><LABEL for="js-sys-confirm-prevent">prevent</LABEL>
+    </DIV>
+  </DIV><DIV class="js-sys-dialog hidden" data-class="js.widget.PromptDialog" id="js-sys-prompt-id">
+    <H1 class="caption"></H1>
+    <P></P>
+    <INPUT type="text" />
+    <BUTTON class="ok" type="button">ok</BUTTON>
+    <BUTTON class="cancel" type="button">cancel</BUTTON>
+    <DIV class="prevent hidden">
+      <INPUT id="js-sys-prompt-prevent" type="checkbox" /><LABEL for="js-sys-prompt-prevent">prevent</LABEL>
+    </DIV>
+  </DIV></DIV>
+        <DIV>
+		<DIV class="closed fables-list" data-class="com.kidscademy.fables.FablesListView" data-list="."><LI class="item" data-attr="data-fable:name;"><IMG data-src="icon" />
+		<H1 class="title" data-text="title"></H1>
+		<P class="moral" data-text="moral"></P>
+	</LI></DIV>
+		<DIV class="fable-view closed" data-class="com.kidscademy.fables.FableView"><DIV class="picture">
+		<IMG />
+	</DIV><UL class="variant-indices hidden" data-list=".">
+		<LI class="variant-index" data-attr="data-index:index;" data-text="label"></LI>
+	</UL><DIV class="content" data-object=".">
+		<DIV class="header">
+			<DIV class="content">
+				<H1 class="title text" data-text="title"></H1>
+				<Q class="moral text" data-text="moral"></Q>
+			</DIV>
+			<SPAN class="icon play"></SPAN><SPAN class="icon share"></SPAN><SPAN class="icon close"></SPAN>
+		</DIV>
+		<DIV class="closed column-text" data-class="com.kidscademy.fables.ColumnText" data-html="text"></DIV>
+	</DIV></DIV>
+	</DIV>
+    </DIV>
+</BODY>
+</HTML>

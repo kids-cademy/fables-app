@@ -1,0 +1,15 @@
+[package]
+name = "fables"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+log = "0.4"
+env_logger = "0.10"
+clap = { version = "4.0", features = ["derive"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = "0.4"
+wry = "0.24"
+ureq = "2.0"
+include_dir = "0.7"

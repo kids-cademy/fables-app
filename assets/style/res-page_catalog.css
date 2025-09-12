@@ -1,0 +1,89 @@
+a[href='catalog.htm'] {
+	border-color: #FFFFFF;
+}
+
+body {
+	overflow-y: scroll;	
+}
+
+.search {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tags {
+	padding: 20px 0;
+	text-align: center;
+}
+
+.tags li {
+	display: inline-block;	
+	padding: 10px 20px;
+	text-align: center;
+}
+
+.tags li img {
+	width: 96px;
+	height: 96px;
+	border-radius: 50%;
+	transition: border-radius 0.5s;
+	cursor: pointer;	
+}
+
+.tags li h4 {
+	margin: 0;
+	font-size: 16px;
+	color: white;
+}
+
+.tags li:hover img {
+	border-radius: 0;
+	box-shadow: 1px 1px 10px #FFFFFF;
+}
+
+.tags li:hover h4 {
+	color: yellow;
+}
+
+.tags li.active img {
+	border-radius: 0;
+}
+
+.fables {
+	padding: 80px 80px 0;
+	text-align: center;
+}
+
+.fables li {
+	display: inline-block;
+	vertical-align: top;
+	width: 140px;
+	margin: 0 20px 30px;
+	font-size: 16px;
+	text-align: center;
+}
+
+.fables img {
+	width: 96px;
+	height: 96px;
+	cursor: pointer;
+}
+
+.fables h4 {
+	margin: 0;
+	padding: 0;
+	font-size: inherit;
+	line-height: 1.4em;
+	color: white;
+}
+
+.fables li:hover img {
+	box-shadow: 1px 1px 10px #FFFFFF;
+}
+
+.fables li:hover h4 {
+	color: yellow;
+}
+
+.fables p {
+	display: none;
+}

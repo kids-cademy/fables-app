@@ -1,0 +1,7 @@
+.sharing .icon {
+	margin: 0 0 0 10px;
+}
+
+.sharing .icon:first-child {
+	margin-left: 0;
+}
