@@ -76,13 +76,19 @@ fn main() -> Result<(), AppError> {
     });
 }
 
-fn custom_protocol_handler(request: &Request<Vec<u8>>) -> wry::Result<Response<Cow<'static, [u8]>>> {
+fn custom_protocol_handler(
+    request: &Request<Vec<u8>>,
+) -> wry::Result<Response<Cow<'static, [u8]>>> {
     trace!(
         "custom_protocol_handler(request: &Request<Vec<u8>>) -> Result<Response<Cow<'static, [u8]>>>"
     );
 
     let path = request.uri().path();
-    let file = ASSETS_DIR.get_file(&path[1..]).unwrap();
+    let Some(file) = ASSETS_DIR.get_file(&path[1..]) else {
+        let body = Cow::Owned(Vec::new());
+        let response = Response::builder().status(404).body(body)?;
+        return Ok(response);
+    };
     let buffer = file.contents().to_vec();
     debug!("load file {}: {}", path, buffer.len());
 
@@ -106,8 +112,7 @@ fn custom_protocol_handler(request: &Request<Vec<u8>>) -> wry::Result<Response<C
         .header("Access-Control-Allow-Origin", "*")
         .header("Access-Control-Allow-Methods", "*")
         .header("Access-Control-Allow-Headers", "*")
-        .body(Cow::Owned(buffer))
-        .unwrap();
+        .body(Cow::Owned(buffer))?;
 
     Ok(response)
 }
