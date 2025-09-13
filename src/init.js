@@ -1,7 +1,7 @@
-const originalLog = console.log;
-const originalError = console.error;
-const originalWarn = console.warn;
-const originalInfo = console.info;
+const __console_log__ = console.log;
+const __console_error__ = console.error;
+const __console_warn__ = console.warn;
+const __console_info__ = console.info;
 
 console.log = function (...args) {
     window.ipc.postMessage(JSON.stringify({
@@ -9,7 +9,7 @@ console.log = function (...args) {
         level: 'log',
         args: args.map(arg => String(arg))
     }));
-    originalLog.apply(console, args);
+    __console_log__.apply(console, args);
 };
 
 console.error = function (...args) {
@@ -18,7 +18,7 @@ console.error = function (...args) {
         level: 'error',
         args: args.map(arg => String(arg))
     }));
-    originalError.apply(console, args);
+    __console_error__.apply(console, args);
 };
 
 console.warn = function (...args) {
@@ -27,7 +27,7 @@ console.warn = function (...args) {
         level: 'warn',
         args: args.map(arg => String(arg))
     }));
-    originalWarn.apply(console, args);
+    __console_warn__.apply(console, args);
 };
 
 console.info = function (...args) {
@@ -36,5 +36,5 @@ console.info = function (...args) {
         level: 'info',
         args: args.map(arg => String(arg))
     }));
-    originalInfo.apply(console, args);
+    __console_info__.apply(console, args);
 };
