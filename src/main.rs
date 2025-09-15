@@ -125,20 +125,20 @@ fn ipc_handler(_window: &Window, request: String) {
             static EMPTY_ARGS: Vec<serde_json::Value> = vec![];
             let level = message["level"].as_str().unwrap_or("log");
             let args = message["args"].as_array().unwrap_or(&EMPTY_ARGS);
+            let log_message = args
+                .iter()
+                .map(|s| s.as_str().unwrap())
+                .collect::<Vec<&str>>()
+                .join(" ");
 
-            let js_log = format!(
-                "JS: {}",
-                args.iter()
-                    .map(|s| s.as_str().unwrap())
-                    .collect::<Vec<&str>>()
-                    .join(" ")
-                    .trim_matches('"')
-            );
+            let log_message = log_message.trim_matches('"');
             match level {
-                "error" => error!("{}", js_log),
-                "warn" => warn!("{}", js_log),
-                "info" => info!("{}", js_log),
-                _ => debug!("{}", js_log),
+                "error" => error!("{}", log_message),
+                "warn" => warn!("{}", log_message),
+                "info" => info!("{}", log_message),
+                "debug" => debug!("{}", log_message),
+                "trace" => trace!("{}", log_message),
+                _ => debug!("{}", log_message),
             }
         }
     }
